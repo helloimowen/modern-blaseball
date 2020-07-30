@@ -1,6 +1,6 @@
 import unittest
 import time
-from modern_blaseball import blaseball_api
+from modernblaseball.modern_blaseball import blaseball_api
 
 class TestBlaseballApi(unittest.TestCase):
     blaseball = blaseball_api()
@@ -124,7 +124,7 @@ class TestBlaseballApi(unittest.TestCase):
 
     def test_many_players(self):
         result = self.blaseball.failover_500(self.blaseball.get_player_stats, args=self.EXAMPLE_PLAYERS)
-
+        print(result.text)
         self.assertEqual(result.status_code, 200)
     
     def test_season(self):
