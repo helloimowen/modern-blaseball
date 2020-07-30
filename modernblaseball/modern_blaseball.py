@@ -74,8 +74,12 @@ class blaseball_api():
         return requests.get(self.URL_BASE + '/database/allTeams')
 
     def get_player_stats(self, player_list): 
-        return requests.get(self.URL_BASE + '/players', 
-                            params={'players':[player_list]})
+        if len(player_list[0]) > 1:
+            return requests.get(self.URL_BASE + '/database/players', 
+                                params={'ids':[','.join(player_list)]})
+        else: 
+            return requests.get(self.URL_BASE + '/database/players', 
+                                params={'ids':[player_list]})
 
     def get_season(self, season_num):
         # https://blaseball.com/database/season?number=0

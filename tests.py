@@ -1,6 +1,6 @@
 import unittest
 import time
-from modern_blaseball import blaseball_api
+from modernblaseball.modern_blaseball import blaseball_api
 
 class TestBlaseballApi(unittest.TestCase):
     blaseball = blaseball_api()
