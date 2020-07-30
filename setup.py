@@ -4,9 +4,9 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="example-pkg-YOUR-USERNAME-HERE", # Replace with your own username
-    version="0.5.1",
-    author="Example Author",
+    name="modernblaseball",
+    version="0.5.4",
+    author="Owen Sanders",
     author_email="helloimowens@gmail.com",
     description="An interface for the blaseball API",
     long_description=long_description,

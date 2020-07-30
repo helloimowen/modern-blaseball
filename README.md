@@ -5,11 +5,15 @@
 
 ## A blaseball API interface. 
 
+### Install via pip:
+
+pip install modernblaseball
+
 
 ### Basic use: 
 
 
-`from modern_blaseball import blaseball_api`
+`from modernblaseball.modern_blaseball import blaseball_api`
 
 `blaseball = blaseball_api()`
 
