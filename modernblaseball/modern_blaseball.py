@@ -16,7 +16,6 @@ class blaseball_api():
     # # # # # # # # # # # # # # # # ENDPOINTS  # # # # # # # # # # # # # # # # # #
     ##############################################################################
 
-
     def get_global_events(self):
         # https://blaseball.com/database/globalEvents
         return requests.get(self.URL_BASE + '/database/globalEvents')
@@ -87,9 +86,9 @@ class blaseball_api():
                             params={'number':[season_num]})
     
     def get_simulation_data(self):
-        # Starting point 
-        # Where did it go? 
-        pass
+        #https://blaseball.com/database/simulationData
+
+       return requests.get(self.URL_BASE + '/database/simulationData')
     
 
     ##############################################################################

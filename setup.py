@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="modernblaseball",
-    version="0.5.4",
+    version="0.5.6",
     author="Owen Sanders",
     author_email="helloimowens@gmail.com",
     description="An interface for the blaseball API",
