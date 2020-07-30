@@ -132,6 +132,11 @@ class TestBlaseballApi(unittest.TestCase):
 
         self.assertEqual(result.status_code, 200)
 
+    def test_simulation_data(self):
+        result = self.blaseball.failover_500(self.blaseball.get_simulation_data)
+
+        self.assertEqual(result.status_code, 200)
+
  
  
 
