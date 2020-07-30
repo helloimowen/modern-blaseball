@@ -100,15 +100,15 @@ class blaseball_api():
             time.sleep(sleepy_time)
         return results
     
-    def structure(self, func, args=None)
+    def structure(self, func, args=None):
         if args:
             results = self.func(args)
         else:
             results = self.func()
         return json.loads(results.text)
 
-    def failover_500(self, func, args=None, max_tries=3):
-        tries = 1
+    def failover_500(self, func, args=None, max_tries=3, sleepy_time=1):
+        tries = 0
         while tries < max_tries:
             if args:
                 result = func(args)
@@ -117,6 +117,6 @@ class blaseball_api():
 
             if result.status_code != 500: 
                 break
-            time.sleep(1)
+            time.sleep(sleepy_time)
             tries += 1
         return result 

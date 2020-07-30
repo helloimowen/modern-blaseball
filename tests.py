@@ -58,76 +58,77 @@ class TestBlaseballApi(unittest.TestCase):
 
     
     def test_global_events(self):
-        result = blaseball.failover_500(self.blaseball.get_global_events)
+        result = self.blaseball.failover_500(self.blaseball.get_global_events)
 
         self.assertEqual(result.status_code, 200)
     
     def test_all_divisions(self):
-        result = blaseball.failover_500(self.blaseball.get_all_divisions)
+        result = self.blaseball.failover_500(self.blaseball.get_all_divisions)
 
         self.assertEqual(result.status_code, 200)
     
     def test_league(self):
-        result = blaseball.failover_500(self.blaseball.get_league, args=self.EXAMPLE_LEAGUE)
+        result = self.blaseball.failover_500(self.blaseball.get_league, args=self.EXAMPLE_LEAGUE)
 
         self.assertEqual(result.status_code, 200)
 
     def test_sub_league(self):
-        result = blaseball.failover_500(self.blaseball.get_sub_league, args=self.EXAMPLE_SUBLEAGUE)
+        result = self.blaseball.failover_500(self.blaseball.get_sub_league, args=self.EXAMPLE_SUBLEAGUE)
 
         self.assertEqual(result.status_code, 200)
     
     def test_game(self):
-        result = blaseball.failover_500(self.blaseball.get_game, args=self.EXAMPLE_GAME)
+        result = self.blaseball.failover_500(self.blaseball.get_game, args=self.EXAMPLE_GAME)
 
         self.assertEqual(result.status_code, 200)
 
     def test_offseason_setup(self):
-        result = blaseball.failover_500(self.blaseball.get_offseason_setup)
+        result = self.blaseball.failover_500(self.blaseball.get_offseason_setup)
 
         self.assertEqual(result.status_code, 200)
             
     def test_offseason_recap(self):
-        result = blaseball.failover_500(self.blaseball.get_offseason_recap, args=self.EXAMPLE_SEASON)
+        result = self.blaseball.failover_500(self.blaseball.get_offseason_recap, args=self.EXAMPLE_SEASON)
 
         self.assertEqual(result.status_code, 200)
             
     def test_offseason_bonus_results(self):
-        result = blaseball.failover_500(self.blaseball.get_offseason_bonus_results, args=self.EXAMPLE_BONUS_ID)
+        result = self.blaseball.failover_500(self.blaseball.get_offseason_bonus_results, args=self.EXAMPLE_BONUS_ID)
 
         self.assertEqual(result.status_code, 200)
             
     def test_offseason_decree_results(self):
-        result = blaseball.failover_500(self.blaseball.get_offseason_decree_results, args=self.EXAMPLE_DECREEE_ID)
+        result = self.blaseball.failover_500(self.blaseball.get_offseason_decree_results, args=self.EXAMPLE_DECREEE_ID)
 
         self.assertEqual(result.status_code, 200)
             
     def test_playoff_details(self):
-        result = blaseball.failover_500(self.blaseball.get_playoff_details, args=self.EXAMPLE_PLAYOFF_NUM)
+        result = self.blaseball.failover_500(self.blaseball.get_playoff_details, args=self.EXAMPLE_PLAYOFF_NUM)
 
         self.assertEqual(result.status_code, 200)
     
     def test_team(self):
-        result = blaseball.failover_500(self.blaseball.get_team, args=self.EXAMPLE_TEAM)
+        result = self.blaseball.failover_500(self.blaseball.get_team, args=self.EXAMPLE_TEAM)
 
         self.assertEqual(result.status_code, 200)
     
     def test_all_teams(self):
-        result = blaseball.failover_500(self.blaseball.get_all_teams)
+        result = self.blaseball.failover_500(self.blaseball.get_all_teams)
 
         self.assertEqual(result.status_code, 200)
 
     def test_one_player(self):
-        result = blaseball.failover_500(self.blaseball.get_player_stats, args=self.EXAMPLE_PLAYER)
+        result = self.blaseball.failover_500(self.blaseball.get_player_stats, args=self.EXAMPLE_PLAYER)
 
         self.assertEqual(result.status_code, 200)
 
     def test_many_players(self):
-        result = blaseball.failover_500(self.blaseball.get_player_stats, args=self.EXAMPLE_PLAYERS)
+        result = self.blaseball.failover_500(self.blaseball.get_player_stats, args=self.EXAMPLE_PLAYERS)
 
         self.assertEqual(result.status_code, 200)
+    
     def test_season(self):
-        result = blaseball.failover_500(self.blaseball.get_season, args=self.EXAMPLE_SEASON)
+        result = self.blaseball.failover_500(self.blaseball.get_season, args=self.EXAMPLE_SEASON)
 
         self.assertEqual(result.status_code, 200)
 
